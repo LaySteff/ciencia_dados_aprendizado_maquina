@@ -10,14 +10,15 @@
 
 | Campo | Preenchimento |
 |---|---|
-| Título provisório do projeto | |
-| Curso / disciplina | |
-| Turma | |
+| Título provisório do projeto |Análise de Vulnerabilidades de Injeção em Aplicações Web: Detecção e Análise Baseadas nas Diretrizes da OWASP
+ |
+| Curso / disciplina |Sistemas de Informação |
+| Turma |Ciência de Dados e Aprendizagem de Máquina |
 | Equipe | |
-| Integrantes e funções iniciais | |
-| Professor(a) | |
-| Data de elaboração | |
-| Versão do documento | |
+| Integrantes e funções iniciais |Layse Steffany |
+| Professor(a) |Kadidja |
+| Data de elaboração | 16/09/2026 |
+| Versão do documento |1.0 |
 
 ## 2. Visão geral
 
@@ -27,13 +28,11 @@ Em até 100 palavras, apresente o problema, o público-alvo, a proposta de anál
 
 **Preenchimento:**
 
-________________________________________________________________________________
-
-________________________________________________________________________________
+Usuários recebem diariamente arquivos por e-mail e nem sempre conseguem identificar se um anexo é seguro ou pode conter algum tipo de malware. Arquivos maliciosos podem causar danos aos dispositivos e comprometer informações. Dessa forma, existe a necessidade de estudar formas de identificar possíveis arquivos suspeitos de maneira automática.
 
 ### 2.2 Declaração do projeto em uma frase
 
-> Nosso projeto utilizará **[dados ou fonte]** para compreender/prever **[fenômeno]**, apoiando **[público ou organização]** na decisão de **[decisão ou ação]**.
+Desenvolver um modelo de aprendizagem de máquina capaz de classificar arquivos como seguros ou potencialmente maliciosos, utilizando características dos próprios arquivos.
 
 **Versão da equipe:**
 
