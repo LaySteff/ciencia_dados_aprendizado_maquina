@@ -1,0 +1,86 @@
+{
+  "fonte": "arquivos_pe_sintetico.csv",
+  "dados_sinteticos": true,
+  "linhas_iniciais": 6150,
+  "etapas": [
+    {
+      "etapa": "1. Padronização de texto",
+      "descricao": "sha256 sem espaços e em minúsculas; mes_aparicao convertido para AAAA-MM",
+      "datas_convertidas": 489,
+      "linhas_apos": 6150
+    },
+    {
+      "etapa": "2. Remoção de duplicatas",
+      "descricao": "linhas idênticas e arquivos repetidos (mesmo sha256)",
+      "duplicatas_exatas": 150,
+      "duplicatas_sha256": 0,
+      "linhas_apos": 6000
+    },
+    {
+      "etapa": "3. Remoção de amostras sem rótulo",
+      "descricao": "label = -1 (não rotulado) ou ausente",
+      "removidas": 300,
+      "linhas_apos": 5700
+    },
+    {
+      "etapa": "4. Padronização de booleanos",
+      "descricao": "sim/não/S/N/true/false convertidos para 1/0",
+      "valores_convertidos": 1133,
+      "linhas_apos": 5700
+    },
+    {
+      "etapa": "5. Valores inválidos",
+      "descricao": "entropia fora de [0, 8], tamanho <= 0 e contagens negativas marcados como ausentes",
+      "valores_invalidados": 47,
+      "linhas_apos": 5700
+    },
+    {
+      "etapa": "6. Imputação de ausentes",
+      "descricao": "mediana para numéricos, moda para booleanos e mes_aparicao",
+      "valores_imputados": 650,
+      "linhas_apos": 5700
+    },
+    {
+      "etapa": "7. Consistência entre colunas",
+      "descricao": "entropia_max_secao ajustada quando menor que a média",
+      "linhas_ajustadas": 50,
+      "linhas_apos": 5700
+    },
+    {
+      "etapa": "8. Transformação logarítmica",
+      "descricao": "log10_tamanho criado a partir de tamanho_bytes",
+      "linhas_apos": 5700
+    },
+    {
+      "etapa": "9. Outliers",
+      "descricao": "identificados pelo critério IQR e mantidos",
+      "linhas_apos": 5700
+    }
+  ],
+  "ausentes_por_coluna": {
+    "tamanho_bytes": 74,
+    "entropia_media_secao": 174,
+    "entropia_max_secao": 29,
+    "num_importacoes": 149,
+    "num_strings": 114,
+    "possui_recursos": 110
+  },
+  "outliers_iqr_mantidos": {
+    "tamanho_bytes": 635,
+    "num_secoes": 75,
+    "entropia_media_secao": 8,
+    "entropia_max_secao": 8,
+    "num_importacoes": 114,
+    "num_exportacoes": 1326,
+    "num_strings": 283,
+    "entropia_strings": 23,
+    "num_urls": 23,
+    "num_paths": 89,
+    "num_registro": 56
+  },
+  "linhas_finais": 5700,
+  "distribuicao_classes": {
+    "0": 3056,
+    "1": 2644
+  }
+}
